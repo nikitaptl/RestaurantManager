@@ -6,9 +6,7 @@ import java.util.UUID
 
 @Builder
 @Data
-public class Order (
+public class Ordering (
     val id : UUID,
-    val name : String,
-    val complexity : String,
-    val num : Int
+    val name : String
 )
