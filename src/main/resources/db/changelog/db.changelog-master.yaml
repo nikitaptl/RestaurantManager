@@ -4,8 +4,8 @@ databaseChangeLog:
       file: ordering.sql
       relativeToChangelogFile: true
   - include:
-      file: client.sql
+      file: users.sql
       relativeToChangelogFile: true
   - include:
-      file: client_ordering.sql
+      file: dishes.sql
       relativeToChangelogFile: true
