@@ -31,6 +31,7 @@ public class Dish {
         name = "";
         minutesToCook = 0;
     }
+
     public Dish(int id, String name, BigDecimal price, int minutesToCook) {
         this.id = id;
         this.name = name;

@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Niko Potylitsin:3
+--changeset Niko Potylitsin:4
 create table users
 (
     id       uuid not null primary key,

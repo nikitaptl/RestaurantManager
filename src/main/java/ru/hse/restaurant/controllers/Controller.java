@@ -76,10 +76,9 @@ class ControllerImpl implements Controller {
         Log.info(String.format("%s зарегистрировался и вошёл в систему", user.ToString()));
         currentUser = user;
 
-        if(Objects.equals(currentUser.getUser_type(), "administrator")) {
+        if (Objects.equals(currentUser.getUser_type(), "administrator")) {
             administratorController.currentAdministrator = currentUser;
-        }
-        else {
+        } else {
             clientController.currentClient = currentUser;
         }
 
@@ -103,14 +102,13 @@ class ControllerImpl implements Controller {
             return "Пользователя с таким именем и паролем не существует";
         }
 
-        User user = (User)resultList.get(0);
+        User user = (User) resultList.get(0);
         Log.info(String.format("%s вошёл в систему", user.ToString()));
         currentUser = user;
 
-        if(Objects.equals(currentUser.getUser_type(), "administrator")) {
+        if (Objects.equals(currentUser.getUser_type(), "administrator")) {
             administratorController.currentAdministrator = currentUser;
-        }
-        else {
+        } else {
             clientController.currentClient = currentUser;
         }
 
@@ -139,10 +137,9 @@ class ControllerImpl implements Controller {
 
         Log.info(String.format("%s вышел из системы", currentUser.ToString()));
 
-        if(Objects.equals(currentUser.getUser_type(), "administrator")) {
+        if (Objects.equals(currentUser.getUser_type(), "administrator")) {
             administratorController.currentAdministrator = null;
-        }
-        else {
+        } else {
             clientController.currentClient = null;
         }
 
@@ -156,12 +153,12 @@ class ControllerImpl implements Controller {
         var query = entityManager.createNativeQuery(queryStr, Dish.class);
         var resultList = query.getResultList();
 
-        if(resultList.isEmpty()) {
+        if (resultList.isEmpty()) {
             return "На данный момент меню пустое.";
         }
         StringBuilder result = new StringBuilder("");
         for (var dish : resultList) {
-            result.append(((Dish)dish).ToString());
+            result.append(((Dish) dish).ToString());
             result.append("<br>");
         }
         return result;
@@ -169,7 +166,7 @@ class ControllerImpl implements Controller {
 
     @Override
     public Object currentUser() {
-        if(currentUser == null) {
+        if (currentUser == null) {
             return "В системе нет авторизанного пользователя";
         }
         return currentUser.ToString();

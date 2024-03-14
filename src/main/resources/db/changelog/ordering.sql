@@ -1,13 +1,10 @@
 --liquibase formatted sql
---changeset Niko Potylitsin:9:217f4f50d0e1b04b8577d555d8570e29
+--changeset Niko Potylitsin:2
 create table ordering
 (
     id         serial not null
         primary key,
-    user_id    uuid,
-    totalPrice numeric(10, 2),
-    isActive   boolean
+    username   varchar(1024),
+    total_price numeric(10, 2),
+    is_active  boolean
 );
-
-alter table ordering
-    owner to postgres;

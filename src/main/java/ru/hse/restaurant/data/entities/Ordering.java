@@ -2,6 +2,7 @@ package ru.hse.restaurant.data.entities;
 
 import java.math.BigDecimal;
 import java.util.List;
+
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.ToString;
@@ -17,7 +18,7 @@ public class Ordering {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    private UUID userId;
+    private String username;
 
     @ElementCollection
     private List<Integer> dishId;
@@ -25,4 +26,20 @@ public class Ordering {
     private BigDecimal totalPrice;
 
     private boolean isActive;
+
+    public Ordering(int id, String username, List<Integer> dishId, BigDecimal totalPrice, boolean isActive) {
+        this.id = id;
+        this.username = username;
+        this.dishId = dishId;
+        this.totalPrice = totalPrice;
+        this.isActive = isActive;
+    }
+
+    public Ordering() {
+        this.id = 0;
+        this.username = "";
+        this.dishId = null;
+        this.totalPrice = BigDecimal.valueOf(0);
+        this.isActive = false;
+    }
 }

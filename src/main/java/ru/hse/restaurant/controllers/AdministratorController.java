@@ -43,7 +43,7 @@ class AdministratorControllerImpl implements AdministratorController {
 
     @Override
     public String addDish(String name, BigDecimal price, int minutesToCook) {
-        if(currentAdministrator == null) {
+        if (currentAdministrator == null) {
             return "В системе нет авторизованного администратора";
         }
         Dish newDish;
@@ -53,7 +53,7 @@ class AdministratorControllerImpl implements AdministratorController {
             var query = entityManager.createNativeQuery(queryStr, Dish.class);
             var resultList = query.getResultList();
 
-            if(!resultList.isEmpty()) {
+            if (!resultList.isEmpty()) {
                 return "Блюдо с такими параметрами уже добавлено в меню";
             }
 
@@ -61,15 +61,14 @@ class AdministratorControllerImpl implements AdministratorController {
             dishRepository.save(newDish);
 
             return String.format("%s успешно добавлено в меню", newDish.ToString());
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return "Что-то пошло не так. Проверьте документацию к программе и попробуйте ещё раз!";
         }
     }
 
     @Override
     public String deleteDish(String name, BigDecimal price, int minutesToCook) {
-        if(currentAdministrator == null) {
+        if (currentAdministrator == null) {
             return "В системе нет авторизованного администратора";
         }
         try {
@@ -78,16 +77,15 @@ class AdministratorControllerImpl implements AdministratorController {
             var query = entityManager.createNativeQuery(queryStr, Dish.class);
             var resultList = query.getResultList();
 
-            if(resultList.isEmpty()) {
+            if (resultList.isEmpty()) {
                 return "Блюда с такими параметрами нет в меню";
             }
 
-            Dish dishDelete = (Dish)resultList.get(0);
+            Dish dishDelete = (Dish) resultList.get(0);
             dishRepository.delete(dishDelete);
 
             return String.format("%s успешно удалено из меню", dishDelete.ToString());
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             return "Что-то пошло не так. Проверьте документацию к программе и попробуйте ещё раз!";
         }
     }

@@ -1,5 +1,5 @@
 --liquibase formatted sql
---changeset Niko Potylitsin:6
+--changeset Niko Potylitsin:1
 create table dishes
 (
     id              serial  not null primary key,

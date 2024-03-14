@@ -4,28 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0587208a-5065-4b7a-84af-b37ce62592a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/AdministratorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/ClientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/entities/Dish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/repositories/DishRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/repositories/OrderingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/services/kitchen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/dishes.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/users.sql" afterDir="false" />
+    <list default="true" id="0587208a-5065-4b7a-84af-b37ce62592a1" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/services/CookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/services/CookingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/ordering_dish_id.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/repositories/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/repositories/Ordering.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/dto/Ordering.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/mappers/OrderDbModelToOrderDtoMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/client.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/AdministratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/AdministratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/entities/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/entities/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/entities/Ordering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/data/entities/Ordering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/hse/restaurant/services/kitchen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/client_ordering.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/dishes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/dishes.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/ordering.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/ordering.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/users.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +55,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -84,37 +78,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build RestaurantManager.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build untitled.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.RestaurantApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;java/trying&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/RestaurantManager&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yaml: Compose Deployment.executor": "Run",
+    "Gradle.Build RestaurantManager.executor": "Run",
+    "Gradle.Build untitled.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.RestaurantApplication.executor": "Run",
+    "git-widget-placeholder": "java/trying",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/RestaurantManager",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Spring Boot.RestaurantApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="untitled" />
       <method v="2">
@@ -135,6 +130,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker-compose.yaml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yaml: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -156,11 +164,26 @@
       <workItem from="1710028414023" duration="752000" />
       <workItem from="1710159586732" duration="738000" />
       <workItem from="1710260407698" duration="15731000" />
-      <workItem from="1710325829472" duration="8732000" />
+      <workItem from="1710325829472" duration="17441000" />
+      <workItem from="1710366000254" duration="8091000" />
+      <workItem from="1710377635127" duration="251000" />
     </task>
+    <task id="LOCAL-00001" summary="commit">
+      <option name="closed" value="true" />
+      <created>1710343307045</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710343307045</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
   </component>
 </project>
